@@ -3,22 +3,17 @@
   <mat-card class="example-card">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-title>Seequent Test</mat-card-title>
 
-      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      <mat-card-subtitle>Colour Picker Demo</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
     <mat-card-content>
-      <p>
-        Bacon ipsum dolor amet strip steak fatback pariatur incididunt enim kevin laborum meatball salami eiusmod rump commodo beef.
-        Aliquip turkey exercitation veniam, alcatra sirloin ut. Consequat capicola cupim turducken. In jerky beef ribs fugiat
-        cow sirloin. Brisket incididunt deserunt ut shoulder, salami mollit shank. Spare ribs strip steak tail ground round
-        ut.
-      </p>
+      <div class="square" id="Front" [ngStyle]="frontColor">Front</div>
+      <div class="square" id="Back" [ngStyle]="backColor">Back</div>
     </mat-card-content>
     <mat-card-actions>
-
-      <app-color-picker></app-color-picker>
+      <app-color-picker (front)="frontClick($event)" (back)="backClick($event)"></app-color-picker>
     </mat-card-actions>
   </mat-card>
 </div>
+
